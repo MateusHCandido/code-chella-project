@@ -34,4 +34,16 @@ public class UsuarioTest {
 
         Assertions.assertTrue("usuario criado".equals(mensagem));
     }
+
+    @Test
+    public void deveCriarUsuarioUsandoFabricaDeUsuario(){
+        FabricaDeUsuario fabrica = new FabricaDeUsuario();
+        Usuario usuario = fabrica.comNomeCpfNascimento("Emilly", "123.456.789-11", LocalDate.parse("1998-12-25"));
+
+        Assertions.assertEquals(usuario.getNome(), "Emilly");
+
+        usuario = fabrica.incluiEndereco("12345-999", 40, "Apto 623");
+
+        Assertions.assertEquals(40, usuario.getEndereco().getNumero() );
+    }
 }
