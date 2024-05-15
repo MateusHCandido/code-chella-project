@@ -32,4 +32,9 @@ public class RepositorioDeUsuarioJpa implements RepositorioDeUsuario {
         //return repository.findAll();
         return null;
     }
+
+    @Override
+    public Usuario alterarUsuario(String cpf, String email) {
+        return null;
+    }
 }
