@@ -20,8 +20,9 @@ public class UsuarioController {
     @PostMapping
     public UsuarioDto cadastrarUsuario(@RequestBody UsuarioDto dto){
         Usuario salvo = criarUsuario
-                        .cadastrarUsuario(new Usuario(dto.cpf(), dto.nome(), dto.nascimento(), dto.email()));
+                .cadastrarUsuario(new Usuario(dto.cpf(), dto.nome(), dto.nascimento(), dto.email()));
 
         return new UsuarioDto(salvo.getCpf(), salvo.getNome(), salvo.getNascimento(), salvo.getEmail());
+
     }
 }
