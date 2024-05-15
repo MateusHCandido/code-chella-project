@@ -11,7 +11,7 @@ public class CriarUsuario {
         this.repositorio = repositorio;
     }
 
-    public Usuario CadastrarUsuario(Usuario usuario){
+    public Usuario cadastrarUsuario(Usuario usuario){
         return repositorio.cadastrarUsuario(usuario);
     }
 }
