@@ -10,5 +10,5 @@ public interface RepositorioDeUsuario {
 
     List<Usuario> listarTodos();
 
-    Usuario alterarUsuario(String cpf, String email);
+    Usuario alterarUsuario(Long id, String cpf, String email);
 }

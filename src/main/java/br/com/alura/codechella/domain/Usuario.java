@@ -29,6 +29,12 @@ public class Usuario {
         }
     }
 
+    public void alterarEmailECpf(String email, String cpf){
+        validarCpf(cpf);
+        this.cpf = cpf;
+        this.email = email;
+    }
+
 
     public Endereco getEndereco() {
         return endereco;
@@ -42,7 +48,8 @@ public class Usuario {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void alterarCpf(String cpf) {
+        validarCpf(cpf);
         this.cpf = cpf;
     }
 
@@ -50,23 +57,16 @@ public class Usuario {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public LocalDate getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(LocalDate nascimento) {
-        this.nascimento = nascimento;
-    }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void alterarEmail(String email) {
         this.email = email;
     }
 }
